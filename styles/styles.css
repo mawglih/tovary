@@ -232,6 +232,14 @@
 	height:100px;
 	animation: colorify 4s linear infinite;
 }
+.loader-content-pink{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height:100px;
+	animation: colorify-pink 4s linear infinite;
+}
 .loader-circle {
 	width: 100px;
 	height: 100px;
@@ -342,14 +350,43 @@
 	font-style: oblique;
 	animation: text-change 4s linear infinite;
 }
+.down-arrow-changing-pink {
+	display: inline-block;
+	position: relative;
+	background: palevioletred;
+	padding: 50px 0;
+	width: 100px;
+	text-align: center;
+	animation: colorify-pink 4s linear infinite;
+}
+
+.down-arrow-changing-pink:after {
+	content: '';
+	display: block;  
+	position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+	top: 100%;
+	width: 0;
+	height: 0;
+	border-right: 100px solid transparent;
+	border-bottom: 0 solid transparent;
+	border-left: 100px solid transparent;
+	animation: color-arrow-pink 5s linear infinite;
+}
 @keyframes colorify {
 	0% { background-color: #222D3E; font-size: 2rem; color: yellow;}
 	50% { background-color: darkcyan; font-size: 3rem; color: aliceblue;}
 	100% { background-color: #222D3E;  font-size: 2rem; color: yellow;}
 }
+@keyframes colorify-pink {
+	0% { background-color: darkorchid; }
+	50% { background-color: palevioletred;}
+	100% { background-color: darkorchid;}
+}
 @keyframes text-change {
 	0% { font-size: 1.5rem; color: yellow;}
-	50% {  font-size: 2.5rem; color: aliceblue;}
+	50% {  font-size: 2rem; color: aliceblue;}
 	100% {  font-size: 1.5rem; color: yellow;}
 }
 
@@ -359,6 +396,18 @@
 	50% { border-top: 40px solid darkcyan;}
 	70% { border-top: 40px solid #222D3E;}
 	100% { border-top: 40px solid darkcyan;}
+}
+@keyframes colorify-pink {
+	0% { background-color: darkorchid;}
+	50% { background-color: palevioletred;}
+	100% { background-color: darkorchid;}
+}
+@keyframes color-arrow-pink {
+	0% { border-top: 40px solid palevioletred;}
+	30% { border-top: 40px solid darkorchid;}
+	50% { border-top: 40px solid palevioletred;}
+	70% { border-top: 40px solid darkorchid;}
+	100% { border-top: 40px solid palevioletred;}
 }
 
 /* strelka vniz */
