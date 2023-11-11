@@ -1399,6 +1399,7 @@ padding: 0 !important;
     border: 1px solid #337ab7;
     background-color: #337ab7;
 }
+
 /* media queries */
 @media screen and (min-width:1201px){
     .reklama__grid-items {
@@ -1473,6 +1474,18 @@ padding: 0 !important;
     .five-in-row ul.products li.product_cat-five-row:nth-child(4),
     .five-in-row ul.products li.product_cat-five-row:nth-child(5) {
         clear: none !important;
+    }
+    .flex-centered-vertical-half {
+        flex-basis:50%; 
+        display:flex; 
+        align-items:center; 
+        justify-content:center;
+        flex-direction:column;
+    }
+    .centered-2div {
+        display: flex;
+        align-items:center; 
+        justify-content:space-evenly;
     }
 }
 
