@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap");
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+.img-blended {
+    mix-blend-mode: multiply;
+}
 /* glowing button  */
 
 .btn-glowing-container{
@@ -145,11 +151,15 @@
   
   .fading-text-1,
   .fading-text-2,
-  .fading-text-3 {
+  .fading-text-3,
+  .fading-text2-1,
+  .fading-text2-2,
+  .fading-text2-3 {
     font-family: "Poppins", sans-serif;
     position: relative;
     font-size: 2rem;
-    color: darkcyan;
+    color: darkblue;
+    font-weight: bold;
     overflow: hidden;
 }
   
@@ -181,6 +191,45 @@
     animation: fading 3s linear infinite;
 }
   
+.fading-text2-1:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background: #fae9e7;
+    animation: fading2 10s linear infinite;
+}
+.fading-text2-2:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background: #fdded8;
+    animation: fading2 10s linear infinite;
+}
+.fading-text2-3:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background: #ffe489;
+    animation: fading2 10s linear infinite;
+}
+
+@keyframes fading2 {
+    0% {
+        left: -20%;
+    }
+    50% {
+        left: 120%;
+    }
+    100% {
+        left: -20%;
+    }
+}
 @keyframes fading {
     0% {
       top: -20%;
@@ -913,17 +962,18 @@ display: block;
 .accent-row-1 {
     background-color: #fae9e7;
     color:#3f3936;
-    padding: 20px;
 }
 .accent-row-2 {
     background-color:#fdded8;
-    padding: 20px;
     color:#1f1c1b;
 }
 .accent-row-3 {
     background-color:#ffe489;
-    padding: 20px;
     color:#1f1c1b;
+}
+.accent-row-4 {
+    background-color: #eeefea;
+    color: #766e3f;
 }
 .accent-col-1 {
     background-color:#fae9e7;
@@ -1481,12 +1531,14 @@ padding: 0 !important;
         align-items:center; 
         justify-content:center;
         flex-direction:column;
+        padding: 0 2rem;
     }
     .centered-2div {
         display: flex;
         align-items:center; 
         justify-content:space-evenly;
     }
+
 }
 
 @media only screen and (min-width: 768px)  and (max-width: 1024px) {
@@ -1496,7 +1548,7 @@ padding: 0 !important;
         }
     }
 
-@media screen and (max-width:770px) {
+@media screen and (max-width:768px) {
     .reklama__rassylka {flex-direction: column;}
     .second_lvl_menu1{height: auto; position: relative; }
     .second_lvl_menu1 a { line-height: 40px; }
@@ -1544,9 +1596,24 @@ padding: 0 !important;
     .leftbtn {
     margin-right: 0;
     }
+    .flex-centered-vertical-half {
+        padding: 0 2rem;
+    }
+    #page-container #main-content > .container {
+        width: 100% !important;
+    }
+    .woocommerce ul.products[class*=columns-] li.product {
+        width: 80% !important;
+        margin: 0 auto !important;
+        float: none !important;
+    }
 }
 
 @media screen and (max-width: 690px) {
+    body{
+        width:100%;
+        overflow-x:hidden;
+    }
     #radioRow {
         max-width: 90vw;
     }
