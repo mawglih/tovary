@@ -5,6 +5,19 @@ h1, h2, h3, h4, h5, h6 {
 .img-blended {
     mix-blend-mode: multiply;
 }
+.img-tiny {
+    max-height: 10rem;
+}
+.img-flex,
+.text-flex {
+    display: flex;
+    flex-grow: 50%;
+}
+.li-img {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 /* glowing button  */
 
 .btn-glowing-container{
@@ -1449,7 +1462,9 @@ padding: 0 !important;
     border: 1px solid #337ab7;
     background-color: #337ab7;
 }
-
+.li-spread {
+    margin-bottom: 1rem;
+}
 /* media queries */
 @media screen and (min-width:1201px){
     .reklama__grid-items {
