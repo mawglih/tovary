@@ -1474,6 +1474,9 @@ padding: 0 !important;
 .badge-mobile {
     display: none;
 }
+.class-main-page {
+    margin-bottom: 2rem;
+}
 /* media queries */
 @media screen and (min-width:1201px){
     .reklama__grid-items {
