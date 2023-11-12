@@ -8,10 +8,14 @@ h1, h2, h3, h4, h5, h6 {
 .img-tiny {
     max-height: 10rem;
 }
+.img-frontrunner {
+    max-height: 260px;
+}
 .img-flex,
 .text-flex {
     display: flex;
     flex-grow: 50%;
+    flex-wrap: wrap;
 }
 .li-img {
     display: flex;
@@ -1426,10 +1430,6 @@ padding: 0 !important;
     box-shadow: 0 0 5px darkred, 0 0 10px darkred, 0 0 20px darkred,
       0 0 50px darkred;
 }
-.ul-group {
-    margin-bottom: 2rem;
-}
-
 .li-group-item:first-child {
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
@@ -1464,6 +1464,15 @@ padding: 0 !important;
 }
 .li-spread {
     margin-bottom: 1rem;
+}
+.badge-brown {
+    margin-left: 1rem;
+    background-color:darkred;
+    color: aliceblue;
+
+}
+.badge-mobile {
+    display: none;
 }
 /* media queries */
 @media screen and (min-width:1201px){
@@ -1512,6 +1521,17 @@ padding: 0 !important;
    body.woocommerce #content-area div.product .woocommerce-tabs .panel {
     padding: 0 !important;
    }
+   .badge-desktop {
+     margin-top: 1rem;
+     line-height: 1.2;
+   }
+   .text-flex {
+    line-height: 1.2;
+    margin-right: 2rem;
+   }
+   #page-container #main-content > .container {
+    width: 100% !important;
+    }
 }
 
 @media screen and (min-width:769px){
@@ -1556,12 +1576,17 @@ padding: 0 !important;
 
 }
 
-@media only screen and (min-width: 768px)  and (max-width: 1024px) {
+@media only screen and (min-width: 769px)  and (max-width: 1024px) {
     .woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
         float:left!important; 
         width:50%!important;
-        }
     }
+    .img-frontrunner {
+        max-height: 200px;
+        display: block;
+        margin: 0 auto;
+    }
+}
 
 @media screen and (max-width:768px) {
     .reklama__rassylka {flex-direction: column;}
@@ -1614,13 +1639,20 @@ padding: 0 !important;
     .flex-centered-vertical-half {
         padding: 0 2rem;
     }
-    #page-container #main-content > .container {
-        width: 100% !important;
-    }
     .woocommerce ul.products[class*=columns-] li.product {
         width: 80% !important;
         margin: 0 auto !important;
         float: none !important;
+    }
+    .img-frontrunner {
+        max-height: 150px;
+        flex-basis: 20%;
+    }
+    .flex-frontrunner {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
     }
 }
 
@@ -1669,13 +1701,18 @@ padding: 0 !important;
         max-width: 90vw;
         margin-bottom: 10px;
     }
+    .flex-centered {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .img-frontrunner {
+        flex-basis: 15%;
+        max-height: 120px;
+    }
 }
-.flex-centered {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
+
 
 @media screen and (max-width: 500px) {
     .radioLabel {
@@ -1706,6 +1743,9 @@ padding: 0 !important;
     }
     #radioRow3 input[name="row3"] {
         margin-bottom: 4vw;
+    }
+    .text-flex {
+        margin-right: 1rem;
     }
 }
 
