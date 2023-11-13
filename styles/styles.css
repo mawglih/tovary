@@ -1384,7 +1384,7 @@ padding: 0 !important;
     cursor: pointer;
     width: fit-content;
 }
-.btn-darkcyan :hover {
+.btn-darkcyan:hover {
     cursor: pointer;
     box-shadow: 0 0 5px darkcyan, 0 0 10px darkcyan, 0 0 20px darkcyan,
       0 0 50px darkcyan;
