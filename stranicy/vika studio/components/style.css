@@ -1,0 +1,70 @@
+.panel-darkcyan {
+    background-color: darkcyan;
+    color: gold;
+    padding: 2rem;
+    font-style: italic;
+}
+.panel-footer-darkcyan {
+    background-color: darkcyan;
+    color: gold;
+    font-size: 120%;
+    font-style: normal;
+    font-weight: bold;
+    border-top-color: gold;
+}
+.glyphicon-star-gold {
+    color: gold;
+}
+
+.panel-brown {
+    background-color: darkred;
+    color: aliceblue;
+    padding: 2rem;
+    font-style: italic;
+}
+.panel-footer-brown {
+    background-color: darkred;
+    color: aliceblue;
+    font-size: 120%;
+    font-style: normal;
+    font-weight: bold;
+    border-top-color: aliceblue;
+}
+
+.panel-darkbl {
+    background-color: darkblue;
+    color: yellow;
+    padding: 2rem;
+    font-style: italic;
+}
+.panel-footer-darkbl {
+    background-color: darkblue;
+    color: yellow;
+    font-size: 120%;
+    font-style: normal;
+    font-weight: bold;
+    border-top-color: yellow;
+}
+/* #337ab7 */
+.panel-footer-primary {
+    background-color: #337ab7;
+    font-size: 120%;
+    font-style: normal;
+    font-weight: bold;
+    border-top-color: gray;
+    color: wheat;
+}
+.panel-pink {
+    background-color: palevioletred;
+    color: white;
+    padding: 2rem;
+    font-style: italic;
+}
+.panel-footer-pink {
+    background-color: palevioletred;
+    color: white;
+    font-size: 120%;
+    font-style: normal;
+    font-weight: bold;
+    border-top-color: white;
+}
