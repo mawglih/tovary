@@ -4,6 +4,9 @@
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
+#post-209 .main_title {
+    display: none;
+}
 .img-blended {
     mix-blend-mode: multiply;
 }
@@ -34,26 +37,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ac-container-pink label {
-    line-height: 2.5rem !important;
-    font-size: 1.8rem !important;
-    font-family: 'Montserrat', sans-serif !important;
-    font-weight: bold;
-    padding: 1rem 3rem;
+    line-height: 1rem !important;
+    font-family:'Montserrat' !important;
+    font-weight: 700;
+    padding: 3rem;
     position: relative;
     z-index: 20;
     display: block;
     cursor: pointer;
-    color: whitesmoke;
-    text-shadow: 1px 1px 1px rgba(150, 140, 140, 0.8);
-    background: rgb(233, 173, 193);
-    background: -moz-linear-gradient(top,rgb(233, 173, 193) 1%,palevioletred 100%);
-    background: -webkit-gradient(linear,left top,left bottom,color-stop(1%,#fff),color-stop(100%,palevioletred));
-    background: -webkit-linear-gradient(top,rgb(233, 173, 193) 1%,palevioletred 100%);
-    background: -o-linear-gradient(top,rgb(233, 173, 193) 1%,palevioletred 100%);
-    background: -ms-linear-gradient(top,rgb(233, 173, 193) 1%,palevioletred 100%);
-    background: linear-gradient(top,rgb(233, 173, 193) 1%,palevioletred 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(233, 173, 193)',endColorstr='palevioletred',GradientType=0 );
+    background: purple;
+    color: aliceblue;
     box-shadow: 0 0 0 1px rgba(163, 112, 163, 0.399),1px 0 0 rgba(238, 130, 238, 0.879) inset,0 2px 2px rgba(148, 0, 211, .2);
+    font-size: 3rem !important;
 }
 
 .ac-container-pink {
@@ -64,13 +59,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .ac-container-pink label:hover {
     background: rgb(211, 27, 89);
+    color: #fff;
+    font-weight: 800;
 }
 
 .ac-container-pink input:checked + label,.ac-container-pink input:checked + label:hover {
     background: purple;
     color: aliceblue;
-    text-shadow: 0 1px 1px rgba(150, 140, 140, 0.8);
-    box-shadow: 0 0 0 1px rgba(163, 112, 163, 0.399),0 2px 2px rgba(148, 0, 211, 0.2);;
+    font-weight: 800;
+    box-shadow: 0 0 0 1px rgba(163, 112, 163, 0.399),0 2px 2px rgba(148, 0, 211, 0.2);
     height: 30px;
     line-height: 21px;
     font-size: 13px;
@@ -83,19 +80,15 @@ h1, h2, h3, h4, h5, h6 {
     height: 2rem;
     right: 1.1rem;
     top: .9rem;
-    /* background: transparent url(../images/arrow_down.png) no-repeat center center; */
 }
 
-/* .ac-container-pink input:checked + label:hover:after {
-    background-image: url(../images/arrow_up.png);
-} */
 
 .ac-container-pink input {
     display: none;
 }
 
 .ac-container-pink article {
-    background: rgba(237, 190, 198, 0.548);
+    background: transparent;
     margin-top: -1px;
     overflow: hidden;
     height: 0;
@@ -113,8 +106,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.5rem !important;
     font-size: 1.5rem !important;
     padding: 2rem;
-    text-shadow: 1px 1px 1px rgba(169, 159, 159, 0.8);
-    font: normal normal 12px 'Open Sans';
+    font-weight: 300 !important;
 }
 
 .ac-container-pink input:checked ~ article {
@@ -135,6 +127,104 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ac-container-pink input:checked ~ article.ac-large {
+    height: max-content;
+}
+/*Accordion darkbl*/
+.ac-container-darkbl {
+    max-width: 100%;
+}
+
+.ac-container-darkbl label {
+    line-height: 1rem !important;
+    font-family:'Montserrat' !important;
+    font-weight: 700;
+    padding: 3rem;
+    position: relative;
+    z-index: 20;
+    display: block;
+    cursor: pointer;
+    background: darkblue;
+    color: aliceblue;
+    box-shadow: 0 0 0 1px rgba(71, 61, 139, 0.441),1px 0 0 rgba(183, 142, 224, 0.892) inset,0 2px 2px rgba(151, 38, 199, 0.2);
+    font-size: 3rem !important;
+}
+
+.ac-container-darkbl {
+    width: 100%;
+    margin: 1rem auto 3rem auto;
+    text-align: left;
+}
+
+.ac-container-darkbl label:hover {
+    background: darkorchid;
+    color: yellow;
+    font-weight: 800;
+}
+
+.ac-container-darkbl input:checked + label,.ac-container-darkbl input:checked + label:hover {
+    background: purple;
+    color: aliceblue;
+    font-weight: 800;
+    box-shadow: 0 0 0 1px rgba(71, 61, 139, 0.441),0 2px 2px rgba(183, 142, 224, 0.892);
+    height: 30px;
+    line-height: 21px;
+    font-size: 13px;
+}
+
+.ac-container-darkbl label:hover:after,.ac-container-darkbl input:checked + label:hover:after {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    right: 1.1rem;
+    top: .9rem;
+}
+
+
+.ac-container-darkbl input {
+    display: none;
+}
+
+.ac-container-darkbl article {
+    background: transparent;
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0;
+    position: relative;
+    z-index: 10;
+    -webkit-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+    -moz-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+    -o-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+    -ms-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+    transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+}
+
+.ac-container-darkbl article p {
+    color: darkslategrey;
+    line-height: 1.5rem !important;
+    font-size: 1.5rem !important;
+    padding: 2rem;
+    font-weight: 300 !important;
+}
+
+.ac-container-darkbl input:checked ~ article {
+    -webkit-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+    -moz-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+    -o-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+    -ms-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+    transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+    box-shadow: 0 0 0 1px rgba(155, 155, 155, 0.3);
+}
+
+.ac-container-darkbl input:checked ~ article.ac-small {
+    height:max-content
+}
+
+.ac-container-darkbl input:checked ~ article.ac-medium {
+    height: max-content;
+}
+
+.ac-container-darkbl input:checked ~ article.ac-large {
     height: max-content;
 }
 /* end accordions */
@@ -728,8 +818,11 @@ h1, h2, h3, h4, h5, h6 {
 #main-content .btn-darkbl,
 #main-content .btn-brown,
 #main-content .btn-pink,
-#main-content .li-group-item a
+#main-content .li-group-item a,
+#main-content .ac-container-pink a
  { color: aliceblue !important;}
+ #main-content .ac-container-brown a
+ { color: yellow !important;}
 #main-content .type-lesson .send-message-button {color: aliceblue !important;}
 #fa-buttons-contactus button{ display:inline-block;}
 #post-1953 .woocommerce-info a{color: #fff !important; font-size: 110% !important;}
