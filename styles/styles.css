@@ -4,7 +4,9 @@
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
-#post-209 .main_title {
+#post-209 .main_title,
+#post-313 .main_title,
+#post-329 .main_title {
     display: none;
 }
 .img-blended {
@@ -225,6 +227,104 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ac-container-darkbl input:checked ~ article.ac-large {
+    height: max-content;
+}
+/*Accordion orange*/
+.ac-container-orange {
+    max-width: 100%;
+}
+
+.ac-container-orange label {
+    line-height: 1rem !important;
+    font-family:'Montserrat' !important;
+    font-weight: 700;
+    padding: 3rem;
+    position: relative;
+    z-index: 20;
+    display: block;
+    cursor: pointer;
+    background: rgb(211, 27, 89);;
+    color: aliceblue;
+    box-shadow: 0 0 0 1px rgba(255, 85, 0, 0.691),1px 0 0 rgb(211, 27, 89) inset,0 2px 2px rgba(189, 52, 139, 0.2);
+    font-size: 3rem !important;
+}
+
+.ac-container-orange {
+    width: 100%;
+    margin: 1rem auto 3rem auto;
+    text-align: left;
+}
+
+.ac-container-orange label:hover {
+    background: darksalmon;
+    color: brown;
+    font-weight: 800;
+}
+
+.ac-container-orange input:checked + label,.ac-container-orange input:checked + label:hover {
+    background: rgb(80, 9, 17);
+    color: aliceblue;
+    font-weight: 800;
+    box-shadow: 0 0 0 1px rgba(137, 37, 203, 0.441),0 2px 2px rgba(183, 142, 224, 0.892);
+    height: 30px;
+    line-height: 21px;
+    font-size: 13px;
+}
+
+.ac-container-orange label:hover:after,.ac-container-orange input:checked + label:hover:after {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    right: 1.1rem;
+    top: .9rem;
+}
+
+
+.ac-container-orange input {
+    display: none;
+}
+
+.ac-container-orange article {
+    background: transparent;
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0;
+    position: relative;
+    z-index: 10;
+    -webkit-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+    -moz-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+    -o-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+    -ms-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+    transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+}
+
+.ac-container-orange article p {
+    color: darkgray;
+    line-height: 1.5rem !important;
+    font-size: 1.5rem !important;
+    padding: 2rem;
+    font-weight: 300 !important;
+}
+
+.ac-container-orange input:checked ~ article {
+    -webkit-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+    -moz-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+    -o-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+    -ms-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+    transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+    box-shadow: 0 0 0 1px rgba(155, 155, 155, 0.3);
+}
+
+.ac-container-orange input:checked ~ article.ac-small {
+    height:max-content
+}
+
+.ac-container-orange input:checked ~ article.ac-medium {
+    height: max-content;
+}
+
+.ac-container-orange input:checked ~ article.ac-large {
     height: max-content;
 }
 /* end accordions */
@@ -1678,13 +1778,83 @@ padding: 0 !important;
     margin-left: 1rem;
     background-color:darkred;
     color: aliceblue;
-
 }
 .badge-mobile {
     display: none;
 }
 .class-main-page {
     margin-bottom: 2rem;
+}
+/* testimonials */
+.panel-darkcyan {
+    background-color: darkcyan;
+    color: gold;
+    padding: 2rem;
+    font-style: italic;
+}
+.panel-footer-darkcyan {
+    background-color: darkcyan;
+    color: gold;
+    font-size: 120%;
+    font-style: normal;
+    font-weight: bold;
+    border-top-color: gold;
+}
+.glyphicon-star-gold {
+    color: gold;
+}
+
+.panel-brown {
+    background-color: darkred;
+    color: aliceblue;
+    padding: 2rem;
+    font-style: italic;
+}
+.panel-footer-brown {
+    background-color: darkred;
+    color: aliceblue;
+    font-size: 120%;
+    font-style: normal;
+    font-weight: bold;
+    border-top-color: aliceblue;
+}
+
+.panel-darkbl {
+    background-color: darkblue;
+    color: yellow;
+    padding: 2rem;
+    font-style: italic;
+}
+.panel-footer-darkbl {
+    background-color: darkblue;
+    color: yellow;
+    font-size: 120%;
+    font-style: normal;
+    font-weight: bold;
+    border-top-color: yellow;
+}
+/* #337ab7 */
+.panel-footer-primary {
+    background-color: #337ab7;
+    font-size: 120%;
+    font-style: normal;
+    font-weight: bold;
+    border-top-color: gray;
+    color: wheat;
+}
+.panel-pink {
+    background-color: palevioletred;
+    color: white;
+    padding: 2rem;
+    font-style: italic;
+}
+.panel-footer-pink {
+    background-color: palevioletred;
+    color: white;
+    font-size: 120%;
+    font-style: normal;
+    font-weight: bold;
+    border-top-color: white;
 }
 /* media queries */
 @media screen and (min-width:1201px){
