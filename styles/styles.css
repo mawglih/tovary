@@ -6,7 +6,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 #post-209 .main_title,
 #post-313 .main_title,
-#post-329 .main_title {
+#post-329 .main_title,
+#post-353 .main_title {
     display: none;
 }
 .img-blended {
@@ -575,7 +576,9 @@ h1, h2, h3, h4, h5, h6 {
   .fading-text-3,
   .fading-text2-1,
   .fading-text2-2,
-  .fading-text2-3 {
+  .fading-text2-3,
+  .fading-text-4,
+  .fading-text2-4 {
     font-family: "Poppins", sans-serif;
     position: relative;
     font-size: 2rem;
@@ -611,7 +614,15 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #fff6db;
     animation: fading 3s linear infinite;
 }
-  
+.fading-text-4:before {
+    content: "";
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 130%;
+    background-color: #eeefea;
+    animation: fading 3s linear infinite;
+}
 .fading-text2-1:before {
     content: "";
     position: absolute;
@@ -637,6 +648,15 @@ h1, h2, h3, h4, h5, h6 {
     width: 120%;
     height: 100%;
     background: #fff6db;
+    animation: fading2 10s linear infinite;
+}
+.fading-text2-4:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background: #eeefea;
     animation: fading2 10s linear infinite;
 }
 
@@ -2033,12 +2053,12 @@ padding: 0 !important;
         margin: 0 !important;
         margin-left: 5% !important;
     }
-    .five-in-row ul.products li.product_cat-five-row:first-child {
-        margin-left: 0 !important;
-    }
     .five-in-row ul.products li.product_cat-five-row:nth-child(4),
     .five-in-row ul.products li.product_cat-five-row:nth-child(5) {
         clear: none !important;
+    }
+    .five-in-row ul.products li.product_cat-five-row:first-child {
+        margin-left: 0 !important;
     }
     .flex-centered-vertical-half {
         flex-basis:50%; 
