@@ -7,7 +7,10 @@ h1, h2, h3, h4, h5, h6 {
 #post-209 .main_title,
 #post-313 .main_title,
 #post-329 .main_title,
-#post-353 .main_title {
+#post-353 .main_title,
+#post-365 .main_title,
+#post-584 .main_title,
+#post-411 .main_title {
     display: none;
 }
 .img-blended {
