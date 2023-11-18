@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="falling-stars.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container-star"></div>
+    <div class="test-class">This is a test</div>
+</body>
+<script>
+    let number_of_star = 250;
+    let random_number = function(min, max){
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+    (function(){
+    let star_rotation = 'move_right;';
+    const container =  document.querySelector("#container-star")
+    for(let i=0; i<number_of_star; i++){
+        let rot = (star_rotation=='move_right;'?'move_left;':'move_right;');
+        let star_top = random_number(0,container.clientHeight);
+        let star_left = random_number(0,container.clientWidth);
+        let star_radius = random_number(0,8);
+        let star_duration= random_number(6,16);
+    container.innerHTML += "<div class='star-falling' style='top: "+star_top+"px; left: "+star_left+"px; width: "+star_radius+"px; height: "+star_radius+"px; "+
+        "animation-name:"+star_rotation+"; animation-duration: "+star_duration+"s;'></div>";
+    }
+    })()
+</script>
+</html>
