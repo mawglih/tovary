@@ -1,0 +1,104 @@
+.container-card-expandable {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+}
+.card-expandable {
+    position: relative;
+    width: 23.8rem;
+    height: 8rem;
+    background-color: blue;
+    border-radius: 2rem;
+    transition: .5s;
+}
+.card-exp-toggle-btn {
+    position: absolute;
+    width: 7rem;
+    height: 6rem;
+    background-color: blue;
+    bottom: -6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 3.5rem;
+    border-bottom-right-radius: 3.5rem;
+    cursor: pointer;
+}
+.card-exp-toggle-btn:before {
+    content: '';
+    position: absolute;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: transparent;
+    left: -3.4rem;
+    border-top-right-radius: 3.5rem;
+    box-shadow: 1.1rem -1rem 0 1rem blue;
+}
+.card-exp-toggle-btn:after {
+    content: '';
+    position: absolute;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: transparent;
+    right: -3.4rem;
+    border-top-left-radius: 3.5rem;
+    box-shadow: -1.1rem -1rem 0 1rem blue;
+}
+.card-exp-toggle-btn span {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-bottom: 3px solid aliceblue;
+    border-right: 3px solid aliceblue;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%) rotate(45deg);
+    transition: .5s;
+}
+
+.card-expandable.active-expandable .card-exp-toggle-btn span {
+    transform: translate(-50%, -70%) rotate(225deg);
+}
+.card-expandable.active-expandable {
+     height: 25.4rem;
+}
+.card-expandable-content {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.card-expandable-content .card-expandable-contentBx {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card-expandable-content .card-expandable-contentBx h2 {
+    color: aliceblue;
+    font-weight: 500;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    line-height: 1.1em;
+}
+.card-expandable-content .card-expandable-contentBx h2 span {
+    font-size: .75em;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+.card-expandable-contentImg {
+    position: relative;
+    /* background-color: aliceblue; */
+    width: 21.6rem;
+    height: 14.7rem;
+    margin-top: 0.7rem;
+    box-shadow: -1rem 1rem 1rem rgba(0,0,0,.15);
+    border: .5rem solid aliceblue;
+}

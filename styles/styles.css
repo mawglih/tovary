@@ -70,6 +70,13 @@ h1, h2, h3, h4, h5, h6 {
     flex-grow: 50%;
     flex-wrap: wrap;
 }
+.flex-horizontal-even {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
 .li-img {
     display: flex;
     align-items: center;
@@ -84,6 +91,213 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle !important; 
     text-align: center;
 }
+/* do not copy body just for testing */
+body {
+    background-color: #fff6db;
+    height: 100vh;
+    }
+    /* flash sale header */
+    .flash-sale-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    /* boxes */
+    .container-rotating-boxes {
+        margin: 0;
+        padding: 0;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+        /* background-color: #c5bcdd;  */
+    }
+    .content-rotating-boxes {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        animation: animate-flash-button 1s linear infinite;
+        transform: rotate(45deg);
+    }
+    .content-rotating-boxes div {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        animation: rotate-flash-button 1s linear infinite
+    }
+    .content-rotating-boxes div:nth-child(1) {
+        top: 0;
+        left: 0;
+        background-color: #8a1bf1;
+    }
+    .content-rotating-boxes div:nth-child(2) {
+        top: 0;
+        right: 0;
+        background-color: #d726f1;
+    }
+    .content-rotating-boxes div:nth-child(3) {
+        bottom: 0;
+        left: 0;
+        background-color: #fe1be1;
+    }
+    .content-rotating-boxes div:nth-child(4) {
+        bottom: 0;
+        right: 0;
+        background-color: #a821f9;
+    }
+    @keyframes rotate-flash-button {
+        0% {
+            transform: rotate(0deg);
+        }
+    
+        10% {
+            transform: rotate(0deg);
+        }
+    
+        50% {
+            transform: rotate(90deg);
+        }
+    
+        90% {
+            transform: rotate(90deg);
+        }
+    
+        100% {
+            transform: rotate(90deg);
+        }
+    }
+    @keyframes animate-flash-button {
+        0% {
+            width: 100px;
+            height: 100px;
+        }
+        10% {
+            width: 100px;
+            height: 100px;
+        }
+        50% {
+            width: 150px;
+            height: 150px;
+        }
+        90% {
+            width: 100px;
+            height: 100px;
+        }
+        100% {
+            width: 100px;
+            height: 100px;
+        }
+    }
+    /* button */
+    /* button flashing neon #8a1bf1; */
+    .container-neon-btn-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .neon-flash-divs {
+        position: relative;
+        display: inline-block;
+        padding: 25px 30px;
+        color: #8a1bf1;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        text-decoration: none;
+        font-size: 5rem;
+        font-weight: 900;
+        transition: 0.5s;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+        overflow: hidden;
+    }
+    .neon-flash-divs:hover {
+        background: #8a1bf1;
+        color: lightcyan;
+        box-shadow: 0 0 5px #8a1bf1, 0 0 25px #8a1bf1, 0 0 50px #8a1bf1, 0 0 200px #8a1bf1;
+        font-weight: 700;
+    }
+    .neon-flash-divs div:nth-child(1) {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #8a1bf1);
+        animation: animate-flash-box1 1s linear infinite;
+    }
+    @keyframes animate-flash-box1 {
+        0% {
+          left: -100%;
+        }
+        50%,
+        100% {
+          left: 100%;
+        }
+    }
+    .neon-flash-divs div:nth-child(2) {
+        position: absolute;
+        display: block;
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, #8a1bf1);
+        animation: animate-flash-box2 1s linear infinite;
+        animation-delay: 0.25s;
+    }
+    @keyframes animate-flash-box2 {
+        0% {
+            top: -100%;
+        }
+        50%,
+        100% {
+            top: 100%;
+        }
+    }
+    .neon-flash-divs div:nth-child(3) {
+        position: absolute;
+        display: block;
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, #8a1bf1);
+        animation: animate-flash-box3 1s linear infinite;
+        animation-delay: 0.5s;
+    }
+    @keyframes animate-flash-box3 {
+        0% {
+            right: -100%;
+        }
+        50%,
+        100% {
+            right: 100%;
+        }
+    }
+    .neon-flash-divs div:nth-child(4) {
+        position: absolute;
+        display: block;
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, #8a1bf1);
+        animation: animate-flash-box4 1s linear infinite;
+        animation-delay: 0.75s;
+    }
+    @keyframes animate-flash-box4 {
+        0% {
+            bottom: -100%;
+        }
+        50%,
+        100% {
+            bottom: 100%;
+        }
+    }
 /* accordions */
 /* ++++++++++++++++++ */
 /* accordion pink */
@@ -178,6 +392,109 @@ h1, h2, h3, h4, h5, h6 {
 .ac-container-pink input:checked ~ article.ac-large {
     height: max-content;
 }
+/* toggle card blue  */
+.card-container {
+    flex-basis: 30%;
+}
+.card-expandable {
+    position: relative;
+    width: 23.8rem;
+    height: 8rem;
+    background-color: blue;
+    border-radius: 2rem;
+    transition: .5s;
+    margin-bottom: 10rem;
+    box-sizing: border-box;
+}
+.card-exp-toggle-btn {
+    position: absolute;
+    width: 7rem;
+    height: 6rem;
+    background-color: blue;
+    bottom: -6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 3.5rem;
+    border-bottom-right-radius: 3.5rem;
+    cursor: pointer;
+}
+.card-exp-toggle-btn:before {
+    content: '';
+    position: absolute;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: transparent;
+    left: -3.4rem;
+    border-top-right-radius: 3.5rem;
+    box-shadow: 1.1rem -1rem 0 1rem blue;
+}
+.card-exp-toggle-btn:after {
+    content: '';
+    position: absolute;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: transparent;
+    right: -3.4rem;
+    border-top-left-radius: 3.5rem;
+    box-shadow: -1.1rem -1rem 0 1rem blue;
+}
+.card-exp-toggle-btn span {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-bottom: 3px solid aliceblue;
+    border-right: 3px solid aliceblue;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%) rotate(45deg);
+    transition: .5s;
+}
+
+.card-expandable.active-expandable .card-exp-toggle-btn span {
+    transform: translate(-50%, -70%) rotate(225deg);
+}
+.card-expandable.active-expandable {
+     height: 26rem;
+}
+.card-expandable-content {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.card-expandable-content .card-expandable-contentBx {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card-expandable-content .card-expandable-contentBx h2 {
+    color: aliceblue;
+    font-weight: 500;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    line-height: 1.1em;
+}
+.card-expandable-content .card-expandable-contentBx h2 span {
+    font-size: .75em;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+.card-expandable-contentImg {
+    position: relative;
+    /* background-color: aliceblue; */
+    width: 21.6rem;
+    height: 14.7rem;
+    margin-top: .7rem;
+    box-shadow: -1rem 1rem 1rem rgba(0,0,0,.15);
+    border: .5rem solid aliceblue;
+}
+/* end toggle card  */
 /*Accordion darkbl*/
 .ac-container-darkbl {
     max-width: 100%;
@@ -1462,6 +1779,9 @@ display: block;
 .accent-row-4 {
     background-color: #eeefea;
     color: #766e3f;
+}
+.accent-row-flashsale {
+    background-color: darkblue;
 }
 .accent-row-ny {
     background-color: #075600;

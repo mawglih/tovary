@@ -1,0 +1,206 @@
+/* do not copy body just for testing */
+body {
+background-color: #fff6db;
+height: 100vh;
+}
+/* flash sale header */
+.flash-sale-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+/* boxes */
+.container-rotating-boxes {
+    margin: 0;
+    padding: 0;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #c5bcdd;  */
+}
+.content-rotating-boxes {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: animate-flash-button 1s linear infinite;
+    transform: rotate(45deg);
+}
+.content-rotating-boxes div {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    animation: rotate-flash-button 1s linear infinite
+}
+.content-rotating-boxes div:nth-child(1) {
+    top: 0;
+    left: 0;
+    background-color: #8a1bf1;
+}
+.content-rotating-boxes div:nth-child(2) {
+    top: 0;
+    right: 0;
+    background-color: #d726f1;
+}
+.content-rotating-boxes div:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    background-color: #fe1be1;
+}
+.content-rotating-boxes div:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    background-color: #a821f9;
+}
+@keyframes rotate-flash-button {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+
+    90% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(90deg);
+    }
+}
+@keyframes animate-flash-button {
+    0% {
+        width: 100px;
+        height: 100px;
+    }
+    10% {
+        width: 100px;
+        height: 100px;
+    }
+    50% {
+        width: 150px;
+        height: 150px;
+    }
+    90% {
+        width: 100px;
+        height: 100px;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+/* button */
+/* button flashing neon #8a1bf1; */
+.container-neon-btn-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.neon-flash-divs {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    color: #8a1bf1;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 900;
+    transition: 0.5s;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    overflow: hidden;
+}
+.neon-flash-divs:hover {
+    background: #8a1bf1;
+    color: lightcyan;
+    box-shadow: 0 0 5px #8a1bf1, 0 0 25px #8a1bf1, 0 0 50px #8a1bf1, 0 0 200px #8a1bf1;
+    font-weight: 700;
+}
+.neon-flash-divs div:nth-child(1) {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8a1bf1);
+    animation: animate-flash-box1 1s linear infinite;
+}
+@keyframes animate-flash-box1 {
+    0% {
+      left: -100%;
+    }
+    50%,
+    100% {
+      left: 100%;
+    }
+}
+.neon-flash-divs div:nth-child(2) {
+    position: absolute;
+    display: block;
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #8a1bf1);
+    animation: animate-flash-box2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate-flash-box2 {
+    0% {
+        top: -100%;
+    }
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+.neon-flash-divs div:nth-child(3) {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #8a1bf1);
+    animation: animate-flash-box3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate-flash-box3 {
+    0% {
+        right: -100%;
+    }
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+.neon-flash-divs div:nth-child(4) {
+    position: absolute;
+    display: block;
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #8a1bf1);
+    animation: animate-flash-box4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate-flash-box4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}

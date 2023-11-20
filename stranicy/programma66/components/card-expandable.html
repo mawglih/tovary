@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        const Listen = (doc) => {
+            return {
+                on: (type, selector, callback) => {
+                    doc.addEventListener(type, (event)=>{
+                        if(!event.target.matches(selector)) return;
+                        callback.call(event.target, event);
+                    }, false);
+                }
+            }
+        };        
+        Listen(document).on('click', '.card-exp-toggle-btn', function (e) {
+            let id = e.target.id;
+            let parent = e.target.parentNode;
+            parent.classList.toggle('active-expandable')
+
+        });
+    </script>
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-card-expandable">
+        <div class="card-expandable" id="card1">
+            <div class="card-expandable-content">
+                <div class="card-expandable-contentBx">
+                    <h2>программа развития<br><span>для детей 6-12 месяцев</span></h2>
+                    <div class="card-expandable-contentImg"></div>
+                </div>
+            </div>
+            <div class="card-exp-toggle-btn" id="btn1">
+                <span ></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
