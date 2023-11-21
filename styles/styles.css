@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,800');
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
@@ -92,213 +93,323 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle !important; 
     text-align: center;
 }
-/* do not copy body just for testing */
-body {
-    background-color: #fff6db;
-    height: 100vh;
+/* programmy header  */
+.container-flex-programmy {
+  display: flex;
+}
+/* krugi */
+.content-circles-around {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 39%;
+  background: darkcyan;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.loader-circles-around {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.loader-circles-around div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.loader-circles-around div:nth-child(1) {
+  background: darkorchid;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+.loader-circles-around div:nth-child(2) {
+  background: #ff3e;
+  border-radius: 0;
+  animation: animate-circles-around 4s ease-in-out infinite;
+}
+
+.loader-circles-around div:nth-child(3) {
+  background: aliceblue;
+  animation: animate-circles-around 4s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+@keyframes animate-circles-around {
+  0% {
+    transform: translate(-150px, 50px) scale(0.4) rotate(0deg);
+    z-index: 1;
+  }
+  50% {
+    transform: translate(150px, -50px) scale(0.4) rotate(180deg);
+    z-index: 1;
+  }
+  50.0001% {
+    transform: translate(150px, -50px) scale(0.4) rotate(180deg);
+    z-index: 3;
+  }
+  100% {
+    transform: translate(-150px, 50px) scale(0.4) rotate(360deg);
+    z-index: 3;
+  }
+}
+/* text  */
+.content-split-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: 'Raleway', Arial, sans-serif;
+  height: 300px;
+  background-color: darkcyan;
+  width: 60%;
+}
+.loader-split-btn {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  line-height: 120px;
+  position: relative;
+  overflow: hidden;
+  background-color: darkcyan;
+}
+
+.loader-split-btn div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.top-half-split-btn {
+  color: red;
+  animation: programma-split-btn 8s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+.bottom-half-split-btn {
+  color: #ff3e;
+  animation: programma-split-btn 8s linear infinite reverse;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+@keyframes programma-split-btn {
+  0% { transform: translateX(100%); }
+  40% { transform: translateX(0); }
+  60% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* flash sale header */
+.flash-sale-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/* boxes */
+.container-rotating-boxes {
+    margin: 0;
+    padding: 0;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    /* background-color: #c5bcdd;  */
+}
+.content-rotating-boxes {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: animate-flash-button 1s linear infinite;
+    transform: rotate(45deg);
+}
+.content-rotating-boxes div {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    animation: rotate-flash-button 1s linear infinite
+}
+.content-rotating-boxes div:nth-child(1) {
+    top: 0;
+    left: 0;
+    background-color: #8a1bf1;
+}
+.content-rotating-boxes div:nth-child(2) {
+    top: 0;
+    right: 0;
+    background-color: #d726f1;
+}
+.content-rotating-boxes div:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    background-color: #fe1be1;
+}
+.content-rotating-boxes div:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    background-color: #a821f9;
+}
+@keyframes rotate-flash-button {
+    0% {
+        transform: rotate(0deg);
     }
-    /* flash sale header */
-    .flash-sale-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
+
+    10% {
+        transform: rotate(0deg);
     }
-    /* boxes */
-    .container-rotating-boxes {
-        margin: 0;
-        padding: 0;
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-basis: 50%;
-        /* background-color: #c5bcdd;  */
+
+    50% {
+        transform: rotate(90deg);
     }
-    .content-rotating-boxes {
+
+    90% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(90deg);
+    }
+}
+@keyframes animate-flash-button {
+    0% {
         width: 100px;
         height: 100px;
-        position: relative;
-        animation: animate-flash-button 1s linear infinite;
-        transform: rotate(45deg);
     }
-    .content-rotating-boxes div {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        animation: rotate-flash-button 1s linear infinite
+    10% {
+        width: 100px;
+        height: 100px;
     }
-    .content-rotating-boxes div:nth-child(1) {
-        top: 0;
-        left: 0;
-        background-color: #8a1bf1;
+    50% {
+        width: 150px;
+        height: 150px;
     }
-    .content-rotating-boxes div:nth-child(2) {
-        top: 0;
-        right: 0;
-        background-color: #d726f1;
+    90% {
+        width: 100px;
+        height: 100px;
     }
-    .content-rotating-boxes div:nth-child(3) {
-        bottom: 0;
-        left: 0;
-        background-color: #fe1be1;
+    100% {
+        width: 100px;
+        height: 100px;
     }
-    .content-rotating-boxes div:nth-child(4) {
-        bottom: 0;
-        right: 0;
-        background-color: #a821f9;
+}
+/* button */
+/* button flashing neon #8a1bf1; */
+.container-neon-btn-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.neon-flash-divs {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    color: #8a1bf1;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 5rem;
+    font-weight: 900;
+    transition: 0.5s;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    overflow: hidden;
+}
+.neon-flash-divs:hover {
+    background: #8a1bf1;
+    color: lightcyan;
+    box-shadow: 0 0 5px #8a1bf1, 0 0 25px #8a1bf1, 0 0 50px #8a1bf1, 0 0 200px #8a1bf1;
+    font-weight: 700;
+}
+.neon-flash-divs div:nth-child(1) {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8a1bf1);
+    animation: animate-flash-box1 1s linear infinite;
+}
+@keyframes animate-flash-box1 {
+    0% {
+        left: -100%;
     }
-    @keyframes rotate-flash-button {
-        0% {
-            transform: rotate(0deg);
-        }
-    
-        10% {
-            transform: rotate(0deg);
-        }
-    
-        50% {
-            transform: rotate(90deg);
-        }
-    
-        90% {
-            transform: rotate(90deg);
-        }
-    
-        100% {
-            transform: rotate(90deg);
-        }
+    50%,
+    100% {
+        left: 100%;
     }
-    @keyframes animate-flash-button {
-        0% {
-            width: 100px;
-            height: 100px;
-        }
-        10% {
-            width: 100px;
-            height: 100px;
-        }
-        50% {
-            width: 150px;
-            height: 150px;
-        }
-        90% {
-            width: 100px;
-            height: 100px;
-        }
-        100% {
-            width: 100px;
-            height: 100px;
-        }
-    }
-    /* button */
-    /* button flashing neon #8a1bf1; */
-    .container-neon-btn-flex {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-    .neon-flash-divs {
-        position: relative;
-        display: inline-block;
-        padding: 25px 30px;
-        color: #8a1bf1;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        text-decoration: none;
-        font-size: 5rem;
-        font-weight: 900;
-        transition: 0.5s;
-        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-        overflow: hidden;
-    }
-    .neon-flash-divs:hover {
-        background: #8a1bf1;
-        color: lightcyan;
-        box-shadow: 0 0 5px #8a1bf1, 0 0 25px #8a1bf1, 0 0 50px #8a1bf1, 0 0 200px #8a1bf1;
-        font-weight: 700;
-    }
-    .neon-flash-divs div:nth-child(1) {
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, #8a1bf1);
-        animation: animate-flash-box1 1s linear infinite;
-    }
-    @keyframes animate-flash-box1 {
-        0% {
-          left: -100%;
-        }
-        50%,
-        100% {
-          left: 100%;
-        }
-    }
-    .neon-flash-divs div:nth-child(2) {
-        position: absolute;
-        display: block;
+}
+.neon-flash-divs div:nth-child(2) {
+    position: absolute;
+    display: block;
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #8a1bf1);
+    animation: animate-flash-box2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate-flash-box2 {
+    0% {
         top: -100%;
-        right: 0;
-        width: 2px;
-        height: 100%;
-        background: linear-gradient(180deg, transparent, #8a1bf1);
-        animation: animate-flash-box2 1s linear infinite;
-        animation-delay: 0.25s;
     }
-    @keyframes animate-flash-box2 {
-        0% {
-            top: -100%;
-        }
-        50%,
-        100% {
-            top: 100%;
-        }
+    50%,
+    100% {
+        top: 100%;
     }
-    .neon-flash-divs div:nth-child(3) {
-        position: absolute;
-        display: block;
-        bottom: 0;
+}
+.neon-flash-divs div:nth-child(3) {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #8a1bf1);
+    animation: animate-flash-box3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate-flash-box3 {
+    0% {
         right: -100%;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(270deg, transparent, #8a1bf1);
-        animation: animate-flash-box3 1s linear infinite;
-        animation-delay: 0.5s;
     }
-    @keyframes animate-flash-box3 {
-        0% {
-            right: -100%;
-        }
-        50%,
-        100% {
-            right: 100%;
-        }
+    50%,
+    100% {
+        right: 100%;
     }
-    .neon-flash-divs div:nth-child(4) {
-        position: absolute;
-        display: block;
+}
+.neon-flash-divs div:nth-child(4) {
+    position: absolute;
+    display: block;
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #8a1bf1);
+    animation: animate-flash-box4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate-flash-box4 {
+    0% {
         bottom: -100%;
-        left: 0;
-        width: 2px;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, #8a1bf1);
-        animation: animate-flash-box4 1s linear infinite;
-        animation-delay: 0.75s;
     }
-    @keyframes animate-flash-box4 {
-        0% {
-            bottom: -100%;
-        }
-        50%,
-        100% {
-            bottom: 100%;
-        }
+    50%,
+    100% {
+        bottom: 100%;
     }
+}
 /* accordions */
 /* ++++++++++++++++++ */
 /* accordion pink */
