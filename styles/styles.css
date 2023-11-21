@@ -27,7 +27,8 @@ h1, h2, h3, h4, h5, h6 {
 #post-117813 .main_title,
 #post-117815 .main_title,
 #post-117857 .main_title,
-#post-117946 .main_title {
+#post-117946 .main_title,
+#post-94059 .main_title {
     display: none;
 }
 
@@ -3042,6 +3043,9 @@ padding: 0 !important;
     }
     .text-flex {
         margin-right: 1rem;
+    }
+    .neon-flash-divs {
+        font-size: 4rem;
     }
 }
 
