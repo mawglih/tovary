@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: start;
     justify-content: center;
 }
 .li-img {
@@ -190,13 +190,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .top-half-split-btn {
-  color: red;
+  color: #ff3e;
+
   animation: programma-split-btn 8s linear infinite;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
 }
 
 .bottom-half-split-btn {
-  color: #ff3e;
+  color: aliceblue;
   animation: programma-split-btn 8s linear infinite reverse;
   clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
 }
@@ -504,25 +505,31 @@ h1, h2, h3, h4, h5, h6 {
 .ac-container-pink input:checked ~ article.ac-large {
     height: max-content;
 }
-/* toggle card blue  */
+/* toggle card  */
 .card-container {
     flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .card-expandable {
     position: relative;
     width: 23.8rem;
     height: 8rem;
-    background-color: blue;
     border-radius: 2rem;
     transition: .5s;
     margin-bottom: 10rem;
     box-sizing: border-box;
 }
-.card-exp-toggle-btn {
+
+.card-exp-toggle-btn-bl,
+.card-exp-toggle-btn-br,
+.card-exp-toggle-btn-cy,
+.card-exp-toggle-btn-pi,
+.card-exp-toggle-btn-vi {
     position: absolute;
     width: 7rem;
     height: 6rem;
-    background-color: blue;
     bottom: -6rem;
     left: 50%;
     transform: translateX(-50%);
@@ -530,17 +537,40 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom-right-radius: 3.5rem;
     cursor: pointer;
 }
-.card-exp-toggle-btn:before {
+.card-exp-toggle-btn-bl:before,
+.card-exp-toggle-btn-br:before,
+.card-exp-toggle-btn-cy:before,
+.card-exp-toggle-btn-pi:before,
+.card-exp-toggle-btn-vi:before {
     content: '';
     position: absolute;
     width: 3.5rem;
     height: 3.5rem;
-    background-color: transparent;
+    background-color: transparent !important;
     left: -3.4rem;
     border-top-right-radius: 3.5rem;
-    box-shadow: 1.1rem -1rem 0 1rem blue;
 }
-.card-exp-toggle-btn:after {
+.card-exp-toggle-btn-bl:before {
+    box-shadow: 1.1rem -1rem 0 1rem darkblue;
+}
+.card-exp-toggle-btn-br:before {
+    box-shadow: 1.1rem -1rem 0 1rem darkred;
+}
+.card-exp-toggle-btn-cy:before {
+    box-shadow: 1.1rem -1rem 0 1rem darkcyan;
+}
+.card-exp-toggle-btn-pi:before {
+    box-shadow: 1.1rem -1rem 0 1rem palevioletred;
+}
+.card-exp-toggle-btn-vi:before {
+    box-shadow: 1.1rem -1rem 0 1rem #8a1bf1;
+}  
+
+.card-exp-toggle-btn-bl:after,
+.card-exp-toggle-btn-br:after,
+.card-exp-toggle-btn-cy:after,
+.card-exp-toggle-btn-pi:after,
+.card-exp-toggle-btn-vi:after {
     content: '';
     position: absolute;
     width: 3.5rem;
@@ -548,9 +578,29 @@ h1, h2, h3, h4, h5, h6 {
     background-color: transparent;
     right: -3.4rem;
     border-top-left-radius: 3.5rem;
-    box-shadow: -1.1rem -1rem 0 1rem blue;
 }
-.card-exp-toggle-btn span {
+.card-exp-toggle-btn-bl:after{
+    box-shadow: -1.1rem -1rem 0 1rem darkblue;
+}
+.card-exp-toggle-btn-br:after{
+    box-shadow: -1.1rem -1rem 0 1rem darkred;
+}
+.card-exp-toggle-btn-cy:after{
+    box-shadow: -1.1rem -1rem 0 1rem darkcyan;
+}
+.card-exp-toggle-btn-pi:after{
+    box-shadow: -1.1rem -1rem 0 1rem palevioletred;
+}
+.card-exp-toggle-btn-vi:after{
+    box-shadow: -1.1rem -1rem 0 1rem #8a1bf1;
+}
+    
+
+.card-exp-toggle-btn-bl span,
+.card-exp-toggle-btn-br span,
+.card-exp-toggle-btn-cy span,
+.card-exp-toggle-btn-pi span,
+.card-exp-toggle-btn-vi span {
     position: absolute;
     width: 1rem;
     height: 1rem;
@@ -562,11 +612,15 @@ h1, h2, h3, h4, h5, h6 {
     transition: .5s;
 }
 
-.card-expandable.active-expandable .card-exp-toggle-btn span {
+.card-expandable.active-expandable .card-exp-toggle-btn-bl span,
+.card-expandable.active-expandable .card-exp-toggle-btn-br span,
+.card-expandable.active-expandable .card-exp-toggle-btn-cy span,
+.card-expandable.active-expandable .card-exp-toggle-btn-pi span,
+.card-expandable.active-expandable .card-exp-toggle-btn-vi span {
     transform: translate(-50%, -70%) rotate(225deg);
 }
 .card-expandable.active-expandable {
-     height: 26rem;
+     height: 30rem;
 }
 .card-expandable-content {
     position: absolute;
@@ -576,7 +630,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-expandable-content .card-expandable-contentBx {
     position: relative;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
     z-index: 10;
     display: flex;
@@ -586,26 +640,67 @@ h1, h2, h3, h4, h5, h6 {
 }
 .card-expandable-content .card-expandable-contentBx h2 {
     color: aliceblue;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.25em;
     text-transform: uppercase;
     letter-spacing: .05em;
-    line-height: 1.1em;
+    line-height: 1em;
 }
 .card-expandable-content .card-expandable-contentBx h2 span {
-    font-size: .75em;
-    font-weight: 400;
+    font-size: .6em;
     text-transform: lowercase;
 }
 .card-expandable-contentImg {
     position: relative;
-    /* background-color: aliceblue; */
+    background-color: aliceblue;
     width: 21.6rem;
-    height: 14.7rem;
+    height: fit-content;
     margin-top: .7rem;
     box-shadow: -1rem 1rem 1rem rgba(0,0,0,.15);
     border: .5rem solid aliceblue;
+    color: #1f1c1b;
 }
+.card-expandable-contentImg>h6 {
+    padding: 1px 3px 2px 3px;
+    font-weight: 500;
+    font-size: 120%;
+}
+/* card colors  */
+/* blue  */
+.card-expandable-bl,
+.card-exp-toggle-btn-bl,
+.card-exp-toggle-btn-bl:before {
+    background-color: darkblue;
+}
+
+/* brown  */
+.card-expandable-br,
+.card-exp-toggle-btn-br,
+.card-exp-toggle-btn-br:before {
+    background-color: darkred;
+}
+
+/* darkcyan  */
+.card-expandable-cy,
+.card-exp-toggle-btn-cy,
+.card-exp-toggle-btn-cy:before {
+    background-color: darkcyan;
+}
+
+/* neon  */
+.card-expandable-vi,
+.card-exp-toggle-btn-vi,
+.card-exp-toggle-btn-vi:before {
+    background-color: #8a1bf1;
+}
+
+/* pink  */
+.card-expandable-pi,
+.card-exp-toggle-btn-pi,
+.card-exp-toggle-btn-pi:before {
+    background-color: palevioletred;
+}
+
 /* end toggle card  */
 /*Accordion darkbl*/
 .ac-container-darkbl {
@@ -2277,9 +2372,10 @@ padding: 0 !important;
 .botanika-slide:first-child {
     margin-left: 0;
 }
-.text-loose {
+.text-loose, 
+.text-loose3 {
     padding: 3rem !important;
-    font-weight: bold !important;
+    font-weight: 900 !important;
 }
 .text-loose2 {
     padding: 2rem !important;
