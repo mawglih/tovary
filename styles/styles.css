@@ -514,7 +514,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2rem 4rem;
     border-radius: 5px;
     margin-bottom: 2rem;
-    width: 23.8rem !important;
 }
 .active-exp-button:hover {
     font-size: larger;
