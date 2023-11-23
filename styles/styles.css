@@ -506,11 +506,25 @@ h1, h2, h3, h4, h5, h6 {
     height: max-content;
 }
 /* toggle card  */
+.non-active-exp-button {
+    display: none;
+}
+.active-exp-button {
+    display: flex;
+    padding: 2rem 4rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    width: 23.8rem !important;
+}
+.active-exp-button:hover {
+    font-size: larger;
+} 
 .card-container {
     flex-basis: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .card-expandable {
     position: relative;
@@ -1588,6 +1602,7 @@ h1, h2, h3, h4, h5, h6 {
 #main-content .btn-brown,
 #main-content .btn-pink,
 #main-content .btn-ny,
+#main-content .btn-neon,
 #main-content .li-group-item a,
 #main-content .ac-container-pink a { 
     color: aliceblue !important;
@@ -2489,6 +2504,20 @@ padding: 0 !important;
     cursor: pointer;
     box-shadow: 0 0 5px #075600, 0 0 10px #075600, 0 0 20px #075600,
       0 0 50px #075600;
+}
+.btn-neon {
+    background-color: #8a1bf1;
+    color: gold !important;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    width: fit-content;
+}
+.btn-neon:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px #8a1bf1, 0 0 10px #8a1bf1, 0 0 20px #8a1bf1,
+      0 0 50px #8a1bf1;
 }
 .li-group-item:first-child {
     border-top-left-radius: .5rem;
