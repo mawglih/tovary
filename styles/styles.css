@@ -703,6 +703,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* end toggle card  */
 /*Accordion darkbl*/
+
 .ac-container-darkbl {
     max-width: 100%;
 }
@@ -3288,6 +3289,10 @@ padding: 0 !important;
         margin: 0 auto;
         display: block;
     }
+    .acc-img2 {
+        margin-left: 1rem !important;
+    }
+
     .ac-container-pink label,
     .ac-container-darkbl label,
     .ac-container-orange label,
