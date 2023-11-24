@@ -40,6 +40,10 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 10rem;
     max-width: 10rem;
 }
+.img-with-text {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 .img-supertiny {
     max-height: 7rem;
     max-width: 7rem;
