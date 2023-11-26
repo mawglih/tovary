@@ -12,6 +12,7 @@ h1, h2, h3, h4, h5, h6 {
 #post-365 .main_title,
 #post-584 .main_title,
 #post-411 .main_title,
+#post-102524 .main_title,
 #post-116831 .main_title,
 #post-117593 .main_title,
 #post-117679 .main_title,
@@ -52,6 +53,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .img-frontrunner {
     max-height: 260px;
+}
+.img-oblozhka {
+    max-height: 400px;
+    max-width: 400px;
 }
 .flex-2images {
     display: flex; 
@@ -3250,6 +3255,10 @@ padding: 0 !important;
     .products-flex-row ul.products li:last-child {
         margin-left: 20% !important;
     }
+    .img-oblozhka {
+        max-height: 300px;
+        max-width: 300px;
+    }
 }
 
 @media screen and (min-width:769px){
@@ -3455,6 +3464,10 @@ padding: 0 !important;
     .img-frontrunner {
         flex-basis: 15%;
         max-height: 120px;
+    }
+    .img-oblozhka {
+        max-height: 250px;
+        max-width: 200px;
     }
 }
 
