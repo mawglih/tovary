@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 #post-584 .main_title,
 #post-411 .main_title,
 #post-102524 .main_title,
+#post-110339 .main_title,
 #post-113991 .main_title,
 #post-116831 .main_title,
 #post-117593 .main_title,
@@ -1410,6 +1411,9 @@ h1, h2, h3, h4, h5, h6 {
 	display: flex;
     height: 150px;
 }
+.strelka-content-long {
+    height: fit-content !important;
+}
 .down-arrow-changing {
 	display: inline-block;
 	position: relative;
@@ -1537,6 +1541,9 @@ h1, h2, h3, h4, h5, h6 {
 	border-bottom: 0 solid transparent;
 	border-left: 100px solid transparent;
 	animation: color-arrow-brown 5s linear infinite;
+}
+.down-arrow-changing-long {
+    padding: 10px !important;
 }
 @keyframes colorify {
 	0% { background-color: #222D3E; font-size: 2rem; color: yellow;}
@@ -2085,6 +2092,110 @@ display: block;
         transform: translateY(0);
     }
 }
+/* animated banner akademiya */
+.animated-banner-container {
+	overflow: hidden;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	background: darkblue;
+	height: 25em;
+	padding-top: 2em;
+}
+.left-banner-animated {
+	width: 40vw;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	margin-top: 3em;
+
+}
+.left-banner-animated:before {
+	content: "";
+	position: absolute;
+	width: 15em;
+	height: 15em;
+	border: 2em solid #8a1bf1;
+	border-radius: 50%;
+	box-shadow: 0 0 0 .5em #0d172e, 0 0 0 .6em rgba(148, 0, 211, 0.2);
+	background: no-repeat center/110% url('/wp-content/uploads/2023/11/vika_tr.png');
+}
+.right-banner-animated {
+	width: 55vw;
+	position: relative;
+	margin-top: 4em;
+}
+
+.right-banner-animated h2 {
+	position: absolute;
+	font-size: 2.5em;
+	color: #fff;
+	font-weight: 400;
+	text-align: center;
+	line-height: 2em;
+	z-index: 5;
+	transform: skewY(-7deg);
+	text-shadow: 1px 1px 0 rgba(148, 0, 211, 0.2),
+	2px 2px 0 rgba(148, 0, 211, 0.2),
+	3px 3px 0 rgba(148, 0, 211, 0.2),
+	4px 4px 0 rgba(148, 0, 211, 0.2),
+	5px 5px 0 rgba(148, 0, 211, 0.2),
+	10px 10px 0px rgba(0,0,0,.2);
+	animation: floating 5s ease-in-out infinite;
+}
+
+.right-banner-animated h2 span {
+	font-weight: 700;
+	font-size: 2em;
+	text-shadow: 1px 1px 0 rgba(148, 0, 211, 0.2),
+	2px 2px 0 rgba(148, 0, 211, 0.2),
+	3px 3px 0 rgba(148, 0, 211, 0.2),
+	4px 4px 0 rgba(148, 0, 211, 0.2),
+	5px 5px 0 rgba(148, 0, 211, 0.2),
+	6px 6px 0 rgba(148, 0, 211, 0.2),
+	7px 7px 0 rgba(148, 0, 211, 0.2),
+	8px 8px 0 rgba(148, 0, 211, 0.2),
+	9px 9px 0 rgba(148, 0, 211, 0.2),
+	10px 10px 0 rgba(148, 0, 211, 0.2),
+	20px 20px 0px rgba(0,0,0,.2);
+}
+
+@keyframes floating {
+	0%, 100% {
+		transform: skewY(-5deg) translateY(-20px);
+	}
+
+	50% {
+		transform: skewY(-5deg) translateY(20px);
+	}
+}
+
+.animated-banner-container i {
+	position: absolute;
+	background: gold;
+	border-radius: 50%;
+	box-shadow: 0 0 10px gold,
+	0 0 20px gold,
+	0 0 40px gold,
+	0 0 80px gold;
+	animation: stars linear infinite;
+}
+
+@keyframes stars {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+/* end banner  */
 .cart-subtotal {display: none;}
 .persona_white  img {max-width: 200px;}
 #pay_with_amazon, .wc-amazon-checkout-message {display: none;}
@@ -3407,6 +3518,18 @@ padding: 0 !important;
         max-height: 300px;
         max-width: 300px;
     }
+    .non-active-exp-button {
+        display: none !important;
+    }
+    .active-exp-button {
+        display: flex !important;
+        padding: 2rem 4rem;
+        border-radius: 5px;
+        margin-bottom: 2rem;
+    }
+    .active-exp-button:hover {
+        font-size: larger;
+    } 
 }
 
 @media screen and (min-width:769px){
@@ -3691,6 +3814,112 @@ padding: 0 !important;
         flex-basis: 40% !important;
         padding-left: 10px !important;
         padding-right: 10px !important;
+    }
+    /* animated banner  */
+    .animated-banner-container {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: darkblue;
+        height: 30em;
+        padding-top: 4em;
+        flex-direction: column;
+    }
+    .left-banner-animated {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2em;
+    
+    }
+    .left-banner-animated:before {
+        content: "";
+        position: absolute;
+        width: 12em;
+        height: 12em;
+        border: 1em solid #8a1bf1;
+        border-radius: 50%;
+        box-shadow: 0 0 0 .4em #0d172e, 0 0 0 .5em rgba(148, 0, 211, 0.2);
+        background: no-repeat center url('/wp-content/uploads/2023/11/vika_tr.png');
+    }
+    .right-banner-animated {
+        position: relative;
+        margin-top: 7em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .right-banner-animated h2 {
+        position: absolute;
+        font-size: 2em;
+        color: #fff;
+        font-weight: 400;
+        text-align: center;
+        line-height: 1.5em;
+        z-index: 5;
+        transform: skewY(-7deg);
+        text-shadow: 1px 1px 0 rgba(148, 0, 211, 0.2),
+        2px 2px 0 rgba(148, 0, 211, 0.2),
+        3px 3px 0 rgba(148, 0, 211, 0.2),
+        4px 4px 0 rgba(148, 0, 211, 0.2),
+        5px 5px 0 rgba(148, 0, 211, 0.2),
+        10px 10px 0px rgba(0,0,0,.2);
+        animation: floating 5s ease-in-out infinite;
+    }
+    
+    .right-banner-animated h2 span {
+        font-weight: 700;
+        font-size: 1.5em;
+        text-shadow: 1px 1px 0 rgba(148, 0, 211, 0.2),
+        2px 2px 0 rgba(148, 0, 211, 0.2),
+        3px 3px 0 rgba(148, 0, 211, 0.2),
+        4px 4px 0 rgba(148, 0, 211, 0.2),
+        5px 5px 0 rgba(148, 0, 211, 0.2),
+        6px 6px 0 rgba(148, 0, 211, 0.2),
+        7px 7px 0 rgba(148, 0, 211, 0.2),
+        8px 8px 0 rgba(148, 0, 211, 0.2),
+        9px 9px 0 rgba(148, 0, 211, 0.2),
+        10px 10px 0 rgba(148, 0, 211, 0.2),
+        20px 20px 0px rgba(0,0,0,.2);
+    }
+    
+    @keyframes floating {
+        0%, 100% {
+            transform: skewY(-5deg) translateY(-20px);
+        }
+    
+        50% {
+            transform: skewY(-5deg) translateY(20px);
+        }
+    }
+    
+    .animated-banner-container i {
+        position: absolute;
+        background: gold;
+        border-radius: 50%;
+        box-shadow: 0 0 10px gold,
+        0 0 20px gold,
+        0 0 40px gold,
+        0 0 80px gold;
+        animation: stars linear infinite;
+    }
+    
+    @keyframes stars {
+        0% {
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
     }
 }
 
