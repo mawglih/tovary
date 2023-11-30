@@ -1821,7 +1821,7 @@ display: block;
 #cn-list-head a { font-size:1.5em; }
 #cn-list a{color:#8224e3;}
 #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-.second_lvl_menu1 {
+/* .second_lvl_menu1 {
 	display:table-row;
 	width:10%;
 	text-align: center ;
@@ -1872,7 +1872,7 @@ display: block;
 	color: #fff;
 	text-decoration: none; 
 	padding: 10px 0 10px 55px;
-	background: #dedede;                   /* fallback color */
+	background: #dedede;                  
 	background: hsla(0, 0%, 91%, 1); 
 	position: relative; 
 	display: block;
@@ -1883,7 +1883,7 @@ display: block;
 	display: block; 
 	width: 0; 
 	height: 0;
-	border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+	border-top: 50px solid transparent;         
 	border-bottom: 25px solid transparent;
 	border-left: 30px solid hsla(0, 0%, 91%, 1);
 	position: absolute;
@@ -1897,7 +1897,7 @@ display: block;
 	display: block; 
 	width: 0; 
 	height: 0;
-	border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+	border-top: 50px solid transparent;        
 	border-bottom: 25px solid transparent;
 	border-left: 30px solid aliceblue;
 	position: absolute;
@@ -1931,7 +1931,7 @@ display: block;
 #breadcrumb_blog_color li a
 {
     color:#000 !important;
-}
+} */
 #btn-help-directory a
 {
     color: #8F03A5 !important;
