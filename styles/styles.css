@@ -35,6 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 #post-117946 .main_title,
 #post-118363 .main_title,
 #post-118450 .main_title,
+#post-118573 .main_title,
 #post-94059 .main_title {
     display: none;
 }
@@ -1694,6 +1695,12 @@ h1, h2, h3, h4, h5, h6 {
 .arrow-color-brown::after {
     border-top-color: darkred;
 }
+.arrow-color-orange {
+    background-color: #c3220c;
+}
+.arrow-color-orange::after {
+    border-top-color: #c3220c;
+}
 .arrow-color-darkbl {
     background-color: darkblue;
 }
@@ -1784,6 +1791,7 @@ h1, h2, h3, h4, h5, h6 {
 #main-content .btn-brown,
 #main-content .btn-pink,
 #main-content .btn-ny,
+#main-content .btn-orange,
 #main-content .btn-neon,
 #main-content .li-group-item a,
 #main-content .ac-container-pink a { 
@@ -2784,6 +2792,20 @@ padding: 0 !important;
     box-shadow: 0 0 5px darkred, 0 0 10px darkred, 0 0 20px darkred,
       0 0 50px darkred;
 }
+.btn-orange {
+    background-color: #c3220c;
+    color: aliceblue !important;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    width: fit-content;
+}
+.btn-orange:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px #c3220c, 0 0 10px #c3220c, 0 0 20px #c3220c,
+      0 0 50px #c3220c;
+}
 .btn-ny {
     background-color: #075600;
     color: gainsboro !important;
@@ -3463,6 +3485,7 @@ padding: 0 !important;
   #main-content .btn-darkcyan,
   #main-content .btn-darkbl,
   #main-content .btn-brown,
+  #main-content .btn-orange,
   #main-content .btn-pink,
   #main-content .btn-ny,
   #main-content .btn-neon {
