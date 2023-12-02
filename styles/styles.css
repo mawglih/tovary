@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 #post-118363 .main_title,
 #post-118450 .main_title,
 #post-118573 .main_title,
+#post-118638 .main_title,
 #post-94059 .main_title {
     display: none;
 }
@@ -1810,6 +1811,8 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 3px;
 }
 #main-content .new-year-product span.onsale,
+#main-content .products-center-arrow-30 span.onsale, 
+#main-content .products-center-arrow-25 span.onsale, 
 #main-content .columns-6 span.onsale, 
 #main-content .columns-5 span.onsale {
     font-size: 1.2rem !important;
@@ -2865,6 +2868,10 @@ padding: 0 !important;
 .li-item-primary {
     border: 1px solid #337ab7;
     background-color: #337ab7;
+}
+.li-item-orange {
+    border: 1px solid #c3220c;
+    background-color: #c3220c;
 }
 .li-spread {
     margin-bottom: 1rem;
