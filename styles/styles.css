@@ -41,6 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 #post-118573 .main_title,
 #post-118576 .main_title,
 #post-118638 .main_title,
+#post-118742 .main_title,
 #post-94059 .main_title {
     display: none;
 }
@@ -758,7 +759,6 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 100%;
 }
 .ac-container-darkbl label {
-    line-height: 1rem !important;
     font-family:'Montserrat' !important;
     font-weight: 700;
     padding: 3rem;
@@ -847,7 +847,6 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 100%;
 }
 .ac-container-orange label {
-    line-height: 1rem !important;
     font-family:'Montserrat' !important;
     font-weight: 700;
     padding: 3rem;
@@ -932,7 +931,6 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 100%;
 }
 .ac-container-brown label {
-    line-height: 1rem !important;
     font-family:'Montserrat' !important;
     font-weight: 700;
     padding: 3rem;
