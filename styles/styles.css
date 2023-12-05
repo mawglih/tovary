@@ -42,6 +42,15 @@ h1, h2, h3, h4, h5, h6 {
 #post-118576 .main_title,
 #post-118638 .main_title,
 #post-118742 .main_title,
+#post-118829 .main_title,
+#post-118832 .main_title,
+#post-118847 .main_title,
+#post-118849 .main_title,
+#post-118852 .main_title,
+#post-118855 .main_title,
+#post-118857 .main_title,
+#post-118859 .main_title,
+#post-118861 .main_title,
 #post-94059 .main_title {
     display: none;
 }
@@ -2382,6 +2391,9 @@ display: block;
   background-color: yellow;
   color: green;
 }
+.knopki a.odinrec span {
+    color: green !important;
+}
 .dvarec {
   background-color: green;
 }
@@ -2404,7 +2416,8 @@ display: block;
   padding: 0;
 }
 
-.knopki a {
+.knopki a ,
+.knopki a span {
   color: aliceblue !important;
   margin: 0;
   padding: 0;
@@ -3674,6 +3687,10 @@ padding: 0 !important;
         margin: 0 auto !important;
         float: none !important;
     }
+    .woocommerce .override-2columns ul.columns-2 li.product  {
+        width: 48% !important;
+        margin: 0 !important;
+    }
     .img-frontrunner {
         max-height: 150px;
         flex-basis: 20%;
@@ -3990,6 +4007,4 @@ padding: 0 !important;
     .acc-img2 {
         margin-left: 1rem !important;
     }
-
-
 }
