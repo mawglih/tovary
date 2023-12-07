@@ -5,6 +5,11 @@
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
+/* hide tags and categories */
+#main-content .type-product .entry-summary .product_meta span.tagged_as,
+#main-content .type-product .entry-summary .product_meta span.posted_in {
+    display: none;
+}
 #post-209 .main_title,
 #post-313 .main_title,
 #post-329 .main_title,
@@ -42,6 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 #post-118576 .main_title,
 #post-118638 .main_title,
 #post-118742 .main_title,
+#post-118765 .main_title,
 #post-118829 .main_title,
 #post-118832 .main_title,
 #post-118847 .main_title,
@@ -51,6 +57,12 @@ h1, h2, h3, h4, h5, h6 {
 #post-118857 .main_title,
 #post-118859 .main_title,
 #post-118861 .main_title,
+#post-118894 .main_title,
+#post-118896 .main_title,
+#post-118899 .main_title,
+#post-118901 .main_title,
+#post-118907 .main_title,
+#post-118911 .main_title,
 #post-94059 .main_title {
     display: none;
 }
