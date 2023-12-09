@@ -17,10 +17,12 @@ h1, h2, h3, h4, h5, h6 {
 #post-365 .main_title,
 #post-584 .main_title,
 #post-411 .main_title,
+#post-54191 .main_title,
 #post-102524 .main_title,
 #post-110339 .main_title,
 #post-113991 .main_title,
 #post-116831 .main_title,
+#post-117141 .main_title,
 #post-117593 .main_title,
 #post-117679 .main_title,
 #post-117691 .main_title,
@@ -37,6 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 #post-117813 .main_title,
 #post-117815 .main_title,
 #post-117857 .main_title,
+#post-117887 .main_title,
 #post-117946 .main_title,
 #post-118363 .main_title,
 #post-118450 .main_title,
@@ -63,6 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 #post-118901 .main_title,
 #post-118907 .main_title,
 #post-118911 .main_title,
+#post-118913 .main_title,
 #post-94059 .main_title {
     display: none;
 }
@@ -1769,7 +1773,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: xx-large;
 	font-style: oblique;
 }
-.vertical-text-arrow{
+.vertical-text-arrow {
 	writing-mode: vertical-rl;
   	text-orientation: upright;
 }
