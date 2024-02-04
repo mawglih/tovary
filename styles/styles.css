@@ -152,6 +152,66 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle !important; 
     text-align: center;
 }
+/* programmy new price  */
+
+.programmy-newprice {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.programmy-newprice .box-newprice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.programmy-newprice .box2-newprice {
+  background: darkred;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  margin-top: -10px;
+}
+
+.programmy-newprice .box-newprice h2 {
+  color: black;
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-70%);
+  text-align: center;
+  animation: animate-newprice 3s ease-in-out infinite;
+}
+
+.programmy-newprice .box-newprice.box2-newprice h2 {
+  color: #fff;
+}
+
+.programmy-newprice .box-newprice h2 div:nth-child(2) {
+  line-height: 3rem;
+  font-size: 4rem;
+}
+
+@keyframes animate-newprice {
+  0%,
+  45% {
+    transform: translateY(-70%);
+  }
+  55%,
+  90% {
+    transform: translateY(70%);
+  }
+  100% {
+    transform: translateY(-70%);
+  }
+}
+
 /* programmy header  */
 .container-flex-programmy {
   display: flex;
@@ -3813,6 +3873,12 @@ padding: 0 !important;
 
 
 @media screen and (max-width: 500px) {
+    .btn-brown,
+    .btn-neon,
+    .btn-darkbl,
+    .btn-darkcyan {
+        width: 100%;
+    }
     .radioLabel {
         font-size: 1.5rem;
         padding-right: 1vw;
