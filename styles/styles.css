@@ -5,6 +5,13 @@
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
+/* fix pictures resize */
+.woocommerce div.product .woocommerce-tabs ul.tabs li,
+.woocommerce #content div.product .woocommerce-tabs ul.tabs li,
+.woocommerce-page div.product .woocommerce-tabs ul.tabs li,
+.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li {
+    height: auto !important;
+}
 /* hide tags and categories */
 #main-content .type-product .entry-summary .product_meta span.tagged_as,
 #main-content .type-product .entry-summary .product_meta span.posted_in {
