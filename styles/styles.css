@@ -5,6 +5,119 @@
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
+/* banner-loto */
+.banner {
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url(../images/bg.png);
+	animation: animated-banner-pattern 15s linear infinite;
+}
+@keyframes animated-banner-pattern {
+	from { background-position: 0 0 }
+
+	to { background-position: 800px 600px; }
+}
+.cradle {
+	display: flex;
+	border-top: 10px solid white;
+	font-weight: bold;
+	font-size: large;
+}
+
+.cradle span {
+	display: block;
+	width: 3px;
+	height: 250px;
+	background-color: white;
+	color: black;
+	margin: 0 29px;
+	position: relative;
+	transform-origin: top;
+}
+
+.cradle span:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: white;
+	transform: translateX(-50%);
+}
+.cradle span:after {
+	content: "l";
+	color: black;
+}
+.cradle span:first-child {
+	animation: left-arm 2s ease-in infinite;
+}
+
+.cradle span:last-child {
+	animation: right-arm 2s ease-in infinite 1s;
+}
+.cradle span::after {
+	color: red;
+}
+.cradle .first:after	{
+	content: "L";
+	transform: translateX(-50%);
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+}
+.cradle .second:after	{
+	content: "O";
+	transform: translateX(-50%);
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+}
+.cradle .third:after	{
+	content: "T";
+	transform: translateX(-50%);
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+}
+.cradle .fourth:after	{
+	content: "E";
+	transform: translateX(-50%);
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+}
+.cradle .fifth:after	{
+	content: "R";
+	transform: translateX(-50%);
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+}
+.cradle .sixth:after	{
+	content: "Y";
+	transform: translateX(-50%);
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+}
+
+@keyframes left-arm {
+	0% { transform: rotate(0deg); }
+	25% { transform: rotate(60deg); }
+	50% { transform: rotate(0deg); }
+	100% { transform: rotate(0deg); }
+}
+
+@keyframes right-arm {
+	0% { transform: rotate(0deg); }
+	25% { transform: rotate(-60deg); }
+	50% { transform: rotate(0deg); }
+	100% { transform: rotate(0deg); }
+}
 /* fix pictures resize */
 .woocommerce div.product .woocommerce-tabs ul.tabs li,
 .woocommerce #content div.product .woocommerce-tabs ul.tabs li,
