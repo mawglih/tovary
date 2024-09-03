@@ -6,12 +6,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
 /* banner-loto */
-.banner {
+.loto-banner {
 	height: 300px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: url(../images/bg.png);
+	background: url(/wp-content/uploads/2024/09/loto-bg.png);
 	animation: animated-banner-pattern 15s linear infinite;
 }
 @keyframes animated-banner-pattern {
@@ -19,14 +19,14 @@ h1, h2, h3, h4, h5, h6 {
 
 	to { background-position: 800px 600px; }
 }
-.cradle {
+.loto-cradle {
 	display: flex;
 	border-top: 10px solid white;
 	font-weight: bold;
 	font-size: large;
 }
 
-.cradle span {
+.loto-cradle span {
 	display: block;
 	width: 3px;
 	height: 250px;
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 	transform-origin: top;
 }
 
-.cradle span:before {
+.loto-cradle span:before {
 	content: "";
 	position: absolute;
 	bottom: 0;
@@ -48,56 +48,56 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: white;
 	transform: translateX(-50%);
 }
-.cradle span:after {
+.loto-cradle span:after {
 	content: "l";
 	color: black;
 }
-.cradle span:first-child {
-	animation: left-arm 2s ease-in infinite;
+.loto-cradle span:first-child {
+	animation: loto-left-arm 2s ease-in infinite;
 }
 
-.cradle span:last-child {
-	animation: right-arm 2s ease-in infinite 1s;
+.loto-cradle span:last-child {
+	animation: loto-right-arm 2s ease-in infinite 1s;
 }
-.cradle span::after {
+.loto-cradle span::after {
 	color: red;
 }
-.cradle .first:after	{
+.loto-cradle .loto-first:after	{
 	content: "L";
 	transform: translateX(-50%);
 	position: absolute;
 	bottom: 20px;
 	left: 0;
 }
-.cradle .second:after	{
+.loto-cradle .loto-second:after	{
 	content: "O";
 	transform: translateX(-50%);
 	position: absolute;
 	bottom: 20px;
 	left: 0;
 }
-.cradle .third:after	{
+.loto-cradle .loto-third:after	{
 	content: "T";
 	transform: translateX(-50%);
 	position: absolute;
 	bottom: 20px;
 	left: 0;
 }
-.cradle .fourth:after	{
+.loto-cradle .loto-fourth:after	{
 	content: "E";
 	transform: translateX(-50%);
 	position: absolute;
 	bottom: 20px;
 	left: 0;
 }
-.cradle .fifth:after	{
+.loto-cradle .loto-fifth:after	{
 	content: "R";
 	transform: translateX(-50%);
 	position: absolute;
 	bottom: 20px;
 	left: 0;
 }
-.cradle .sixth:after	{
+.loto-cradle .loto-sixth:after	{
 	content: "Y";
 	transform: translateX(-50%);
 	position: absolute;
@@ -105,14 +105,14 @@ h1, h2, h3, h4, h5, h6 {
 	left: 0;
 }
 
-@keyframes left-arm {
+@keyframes loto-left-arm {
 	0% { transform: rotate(0deg); }
 	25% { transform: rotate(60deg); }
 	50% { transform: rotate(0deg); }
 	100% { transform: rotate(0deg); }
 }
 
-@keyframes right-arm {
+@keyframes loto-right-arm {
 	0% { transform: rotate(0deg); }
 	25% { transform: rotate(-60deg); }
 	50% { transform: rotate(0deg); }
@@ -191,6 +191,7 @@ h1, h2, h3, h4, h5, h6 {
 #post-119134 .main_title,
 #post-119138 .main_title,
 #post-119140 .main_title,
+#post-124035 .main_title,
 #post-94059 .main_title {
     display: none;
 }
@@ -2249,7 +2250,10 @@ display: block;
     flex:0 0 20%;
     padding: 0 2px 0 2px;
 }
-
+.bg-darkvi {
+    background-color: #540d6e;
+    color: aliceblue;
+}
 .bg-orange {
     background-color:#c3220c; 
     color:aliceblue;
