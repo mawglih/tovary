@@ -31,7 +31,6 @@ h1, h2, h3, h4, h5, h6 {
 	width: 3px;
 	height: 250px;
 	background-color: white;
-	color: black;
 	margin: 0 29px;
 	position: relative;
 	transform-origin: top;
@@ -47,10 +46,6 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: 50%;
 	background-color: white;
 	transform: translateX(-50%);
-}
-.loto-cradle span:after {
-	content: "l";
-	color: black;
 }
 .loto-cradle span:first-child {
 	animation: loto-left-arm 2s ease-in infinite;
@@ -3905,6 +3900,42 @@ padding: 0 !important;
         align-items: flex-start;
         justify-content: space-between;
     }
+    /* craddle */
+
+.loto-cradle span {
+	display: block;
+	width: 2px;
+	height: 150px;
+	background-color: white;
+	color: black;
+	margin: 0 19px;
+	position: relative;
+	transform-origin: top;
+}
+    .loto-cradle span:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: white;
+        transform: translateX(-50%);
+    }
+    .loto-cradle .loto-first:after,
+    .loto-cradle .loto-second:after,
+    .loto-cradle .loto-third:after,
+    .loto-cradle .loto-fourth:after,
+    .loto-cradle .loto-fifth:after,
+    .loto-cradle .loto-sixth:after	{
+        bottom: 10px;
+        font-weight: bolder;
+	    font-size:medium;
+        transform: translateX(-50%);
+        position: absolute;
+        left: 0;
+    }
 }
 
 @media screen and (max-width: 690px) {
@@ -3967,6 +3998,7 @@ padding: 0 !important;
     .content-circles-around {
         height: 150px;
     }
+     
 }
 
 @media screen and (max-width: 600px) {
@@ -4180,6 +4212,7 @@ padding: 0 !important;
             opacity: 0;
         }
     }
+   
 }
 
 
