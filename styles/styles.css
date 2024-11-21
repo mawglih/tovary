@@ -2251,6 +2251,10 @@ display: block;
     flex:0 0 20%;
     padding: 0 2px 0 2px;
 }
+.bg-chitat {
+    background-color: #9cd3e7;
+    color: #222D3E;
+}
 .bg-darkgr {
     background-color: #146208;
     color: whitesmoke;
