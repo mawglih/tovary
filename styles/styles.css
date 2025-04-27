@@ -193,7 +193,8 @@ h1, h2, h3, h4, h5, h6 {
 #post-119140 .main_title,
 #post-124035 .main_title,
 #post-128023 .main_title,
-#post-94059 .main_title {
+#post-94059 .main_title,
+#post-129794 .main_title {
     display: none;
 }
 
@@ -2014,6 +2015,9 @@ h1, h2, h3, h4, h5, h6 {
 }
  #main-content .ac-container-brown a {
     color: yellow !important;
+}
+#main-content .uroki-detyam a {
+    
 }
 #main-content .new-year-product a,
 #main-content .new-year-product .price {
