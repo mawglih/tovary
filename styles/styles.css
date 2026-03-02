@@ -195,7 +195,8 @@ h1, h2, h3, h4, h5, h6 {
 #post-128023 .main_title,
 #post-94059 .main_title,
 #post-129794 .main_title,
-#post-129807 .main_title {
+#post-129807 .main_title,
+#post-135633 .main_title {
     display: none;
 }
 
@@ -1612,6 +1613,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* strelka blinking */
+.empty2 {
+    height: 2rem;
+}
 .empty3 {
     height: 3rem;
 }
@@ -2238,12 +2242,25 @@ display: block;
     flex-direction: column;
     border:solid 3px #c3220c;
 }
+.reklama__top2 {
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+    border:solid 3px blue;
+}
 .reklama__rassylka {
     display:flex;
     flex-direction:row;
     align-items:center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+.reklama__rassylka-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Optional, for vertical stacking */
+    height: 100%; /* Ensure the parent div has a set height */
 }
 .reklama__rassylka-item {
     flex:0 0 25%;
